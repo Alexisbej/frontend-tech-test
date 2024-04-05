@@ -1,13 +1,14 @@
-import React from 'react';
-import { FlexBox, Alignment } from '@lumx/react';
-import Search from '../Search';
+import { Alignment, FlexBox } from "@lumx/react";
+import marvel_logo from "../../marvel_logo.png";
+import Search from "../Search";
 
-const Header = () => (
-	<header className="lumx-spacing-padding-big header">
-		<FlexBox vAlign={Alignment.right}>
-			<Search />
-		</FlexBox>
-	</header>
+const Header = ({ onSearch }) => (
+  <header className="lumx-spacing-padding-big header">
+    <FlexBox vAlign={Alignment.spaceBetween} hAlign={Alignment.center}>
+      <img width={150} src={marvel_logo} />
+      <Search onSearch={onSearch} />
+    </FlexBox>
+  </header>
 );
 
 export default Header;
